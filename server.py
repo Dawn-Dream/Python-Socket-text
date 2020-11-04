@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import socket               
  
 s = socket.socket()         
@@ -8,6 +9,6 @@ s.bind((host, port))
 s.listen(5)                
 while True:
     c,addr = s.accept()     
-    print 'ip:', addr
+    print '已向地址发送内容：', addr
     c.send('wdnmd!')
     c.close()               
