@@ -1,4 +1,4 @@
-uimport json
+import json
 import threading
 from socket import *
 from time import ctime
