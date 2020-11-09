@@ -101,8 +101,9 @@ class ClientSendMsgThread(threading.Thread):
 
 def main():
     buf = 1024
+    ip = input("server ip:")
     # 改变这个的地址,变成服务器的地址,那么只要部署到服务器上就可以全网使用了
-    address = ("127.0.0.1", 12231)
+    address = (ip, 12231)
     cs = socket(AF_INET, SOCK_STREAM, 0)
     cs.connect(address)
     data = cs.recv(buf).decode("utf-8")
