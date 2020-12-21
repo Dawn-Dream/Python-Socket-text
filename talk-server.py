@@ -16,9 +16,8 @@ class PyChattingServer:
         self.__msg_handler = ChattingHandler()
 
     def start_session(self):
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(('8.8.8.8', 80))
-        ip = s.getsockname()[0]
+        ip = '0.0.0.0'
+
         print('伺服器的网络地址为：' + ip)
         print('等待客户连接...\r\n')
         try:
